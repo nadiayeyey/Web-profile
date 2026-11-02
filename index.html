@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV - Syabilaa</title>
+<style>
+  body{font-family:Inter, sans-serif; background:#f3f4f6; margin:0; padding:20px}
+  .cv{max-width:800px; margin:auto; background:white; display:flex; border-radius:12px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,.1)}
+  .kiri{background:#1e293b; color:white; width:35%; padding:30px}
+  .kanan{width:65%; padding:30px}
+  h1{margin:0; font-size:24px} h2{font-size:14px; color:#38bdf8; margin-top:15px; border-bottom:1px solid #334155; padding-bottom:5px}
+  p, li{font-size:13px; line-height:1.6}
+  .skill{background:#334155; padding:6px 10px; border-radius:20px; display:inline-block; margin:4px; font-size:12px}
+  button{margin:20px auto; display:block; background:#1e293b; color:white; border:0; padding:12px 20px; border-radius:8px; cursor:pointer}
+  @media print{button{display:none} body{padding:0}}
+</style>
+</head>
+<body>
+
+<div class="cv" id="cv">
+  <div class="kiri">
+    <h1 id="nama">Syabilaa Aza</h1>
+    <p id="role">Pelajar / Fresh Graduate</p>
+    <h2>Kontak</h2>
+    <p>📞 <span id="hp">08xx-xxxx-xxxx</span><br>📧 emailkamu@gmail.com<br>📍 Bandung</p>
+    
+    <h2>Keahlian</h2>
+    <div id="skills">
+      <span class="skill">Microsoft Office</span>
+      <span class="skill">Canva</span>
+      <span class="skill">Komunikasi</span>
+    </div>
+
+    <h2>Pendidikan</h2>
+    <p><b>SMA / SMK</b><br>2023 - 2026</p>
+  </div>
+
+  <div class="kanan">
+    <h2 style="color:#1e293b; border-color:#e5e7eb">Tentang Saya</h2>
+    <p>Saya adalah pribadi yang bersyukur, disiplin, dan cepat belajar. Mencari pengalaman untuk mengembangkan diri.</p>
+    
+    <h2 style="color:#1e293b; border-color:#e5e7eb">Pengalaman</h2>
+    <ul>
+      <li><b>OSIS / Organisasi</b> - Sekretaris (2024)</li>
+      <li><b>Panitia Event Sekolah</b> - Sie Acara</li>
+    </ul>
+
+    <h2 style="color:#1e293b; border-color:#e5e7eb">Edit Cepat (Javascript)</h2>
+    <input type="text" id="inputNama" placeholder="Ganti Nama..." style="width:100%; padding:8px; margin-top:10px">
+    <input type="text" id="inputRole" placeholder="Ganti Role/Jabatan..." style="width:100%; padding:8px; margin-top:8px">
+  </div>
+</div>
+
+<button onclick="window.print()">Download Jadi PDF</button>
+
+<script>
+// Fitur Javascript: ganti nama live
+  document.getElementById('inputNama').addEventListener('input', function(){
+    document.getElementById('nama').innerText = this.value || 'Syabilaa Aza';
+  });
+  document.getElementById('inputRole').addEventListener('input', function(){
+    document.getElementById('role').innerText = this.value || 'Pelajar / Fresh Graduate';
+  });
+</script>
+
+</body>
+  </html>
